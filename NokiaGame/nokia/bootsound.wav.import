@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bootsound.wav-610a37d191f3a25b3fc1a752a9708d24.sample"
+
+[deps]
+
+source_file="res://nokia/bootsound.wav"
+dest_files=[ "res://.import/bootsound.wav-610a37d191f3a25b3fc1a752a9708d24.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
