@@ -2,8 +2,6 @@ extends Node2D
 
 # Sumaris Transition script 
 var path = "Scenes/Main.tscn"
-var time = 5.0
-var solo_fade = false
 
 func _ready():
 	$AnimationPlayer.play("Transition")

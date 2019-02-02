@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/Transition.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Transition.gd" type="Script" id=1]
 [ext_resource path="res://nokia/Transition.png" type="Texture" id=2]
 [ext_resource path="res://nokia/nokia.png" type="Texture" id=3]
 [ext_resource path="res://nokia/bootsound.wav" type="AudioStream" id=4]
@@ -68,7 +68,7 @@ hframes = 133
 frame = 132
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-playback_speed = 5.0
+playback_speed = 10.0
 anims/Transition = SubResource( 1 )
 
 [node name="Sprite2" type="Sprite" parent="."]

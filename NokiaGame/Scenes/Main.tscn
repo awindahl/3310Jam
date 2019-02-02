@@ -19,6 +19,7 @@ extents = Vector2( 1, 43 )
 position = Vector2( 20, 33 )
 
 [node name="Node" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="BackWall" type="StaticBody2D" parent="Node"]
 
