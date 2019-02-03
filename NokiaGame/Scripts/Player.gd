@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-var velocity = Vector2()
 var tick = false
 var  laser = preload("res://Scenes/Laser.tscn")
 var laserCount = 0
@@ -8,7 +7,6 @@ const STAGE_W = 84
 const STAGE_H = 48
 var canShoot = true
 
-# supress delta
 func _process(delta):
 
 	if Input.is_action_pressed("ui_left"):

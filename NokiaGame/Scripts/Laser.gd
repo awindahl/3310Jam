@@ -12,8 +12,11 @@ func _ready():
 
 func _move(x,y):
 	if tick:
-		translate(Vector2(x,y))
 		tick = false
+		translate(Vector2(x,y))
+		if global_position.x >= 84 + 4:
+			player.laserCount -= 1
+			queue_free()
 
 func _on_Timer_timeout():
 	tick = true
