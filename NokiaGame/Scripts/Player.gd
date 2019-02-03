@@ -2,10 +2,12 @@ extends KinematicBody2D
 
 var tick = false
 var  laser = preload("res://Scenes/Laser.tscn")
+var canShoot = true
 var laserCount = 0
+const TYPE = "PLAYER"
 const STAGE_W = 84
 const STAGE_H = 48
-var canShoot = true
+
 
 func _process(delta):
 
@@ -55,3 +57,6 @@ func _wrap(ship_pos, stagemin, stagemax, dir):
 
 func _on_ShootTimer_timeout():
 	canShoot = true
+
+func _die():
+	get_tree().change_scene("res://Scenes/Transition.tscn")

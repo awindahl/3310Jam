@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var tick = false
 var player
+const TYPE = "LASER"
 
 func _ready():
 	$AnimationPlayer.play("Laser")
@@ -21,7 +22,7 @@ func _move(x,y):
 func _on_Timer_timeout():
 	tick = true
 	_move(1,0)
-
+	
 func _collide():
 	player.laserCount -= 1
 	queue_free()
