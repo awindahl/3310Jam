@@ -43,4 +43,8 @@ anims/idle = SubResource( 2 )
 wait_time = 0.16
 autostart = true
 
+[node name="ShootTimer" type="Timer" parent="."]
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]

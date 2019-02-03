@@ -3,22 +3,14 @@ extends KinematicBody2D
 var velocity = Vector2()
 var tick = false
 var  laser = preload("res://Scenes/Laser.tscn")
+var laserCount = 0
 const STAGE_W = 84
 const STAGE_H = 48
-var LEFT = 0
-var RIGHT = 0
-var UP = 0
-var DOWN = 0
+var canShoot = true
 
 # supress delta
 func _process(delta):
-	
-	LEFT = global_position.x - 16
-	RIGHT = global_position.x + 32
-	UP = global_position.y -16
-	DOWN = global_position.y + 32
-	
-	print (global_position)
+
 	if Input.is_action_pressed("ui_left"):
 		_move(-1,0)
 		_wrap(global_position.x, 0, STAGE_W, 0)
@@ -31,6 +23,13 @@ func _process(delta):
 	elif Input.is_action_pressed("ui_down"):
 		_move(0,1)
 		_wrap(global_position.y, 0, STAGE_H, 1)
+	
+	if Input.is_action_just_pressed("ui_accept") and laserCount < 3 and canShoot:
+		canShoot = false
+		$ShootTimer.start()
+		laserCount += 1
+		var newLaser = laser.instance()
+		get_parent().add_child(newLaser)
 	
 func _move(x,y):
 	if tick:
@@ -55,3 +54,6 @@ func _wrap(ship_pos, stagemin, stagemax, dir):
 			global_position.y = stagemin
 		else:
 			global_position.y = ship_pos
+
+func _on_ShootTimer_timeout():
+	canShoot = true
