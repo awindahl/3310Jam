@@ -44,7 +44,7 @@ autoplay = "idle"
 anims/idle = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.16
+wait_time = 0.08
 autostart = true
 
 [node name="ShootTimer" type="Timer" parent="."]
