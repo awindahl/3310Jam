@@ -59,4 +59,4 @@ func _on_ShootTimer_timeout():
 	canShoot = true
 
 func _die():
-	get_tree().change_scene("res://Scenes/Transition.tscn")
+	get_tree().change_scene("res://Scenes/Game Over.tscn")
